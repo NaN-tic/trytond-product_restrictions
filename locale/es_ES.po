@@ -1,0 +1,183 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:product.template:"
+msgid ""
+"Product \"%(product)s\" can not be moved from/to party \"%(party)s\" because"
+" it misses restriction \"%(restriction)s\"."
+msgstr ""
+"No se puede mover el producto \"%(product)s\" hacia/desde el tercero "
+"\"%(party)s\" porqué le falta la restricción \"%(restriction)s\"."
+
+msgctxt "field:party.party,customer_restrictions:"
+msgid "Customer Restrictions"
+msgstr "Restricciones cliente"
+
+msgctxt "field:party.party,supplier_restrictions:"
+msgid "Supplier Restrictions"
+msgstr "Restricciones proveedor"
+
+msgctxt "field:product.restriction,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.restriction,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.restriction,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:product.restriction,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.restriction,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.restriction,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.restriction,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.restriction-party.party.customer,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.restriction-party.party.customer,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.restriction-party.party.customer,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:product.restriction-party.party.customer,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:product.restriction-party.party.customer,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.restriction-party.party.customer,restriction:"
+msgid "Restriction"
+msgstr "Restricción"
+
+msgctxt "field:product.restriction-party.party.customer,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.restriction-party.party.customer,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.restriction-party.party.supplier,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.restriction-party.party.supplier,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.restriction-party.party.supplier,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:product.restriction-party.party.supplier,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:product.restriction-party.party.supplier,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.restriction-party.party.supplier,restriction:"
+msgid "Restriction"
+msgstr "Restricción"
+
+msgctxt "field:product.restriction-party.party.supplier,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.restriction-party.party.supplier,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.restriction-product.template,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:product.restriction-product.template,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:product.restriction-product.template,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:product.restriction-product.template,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:product.restriction-product.template,restriction:"
+msgid "Restriction"
+msgstr "Restricción"
+
+msgctxt "field:product.restriction-product.template,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:product.restriction-product.template,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:product.restriction-product.template,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:product.template,restrictions:"
+msgid "Restrictions"
+msgstr "Restricciones"
+
+msgctxt "model:ir.action,name:act_product_restriction"
+msgid "Product Restriction"
+msgstr "Restricción de producto"
+
+msgctxt "model:ir.ui.menu,name:menu_product_restriction"
+msgid "Product Restriction"
+msgstr "Restriciones de producto"
+
+msgctxt "model:product.restriction,name:"
+msgid "Product Restriction"
+msgstr "Restriccion de producto"
+
+msgctxt "model:product.restriction-party.party.customer,name:"
+msgid "Product Restriction - Customer"
+msgstr "Restriccion de producto - Cliente"
+
+msgctxt "model:product.restriction-party.party.supplier,name:"
+msgid "Product Restriction - Supplier"
+msgstr "Restriccion de producto - Proveedor"
+
+msgctxt "model:product.restriction-product.template,name:"
+msgid "Product Restriction - Product Template"
+msgstr "Restriccion de producto - Plantilla de producto"
+
+msgctxt "model:res.group,name:group_product_restrictions_admin"
+msgid "Product Restrictions Administration"
+msgstr "Administración restriciones de producto"
+
+msgctxt "view:party.party:"
+msgid "Restrictions"
+msgstr "Restriciones"
+
+msgctxt "view:product.restriction:"
+msgid "Product Restrition"
+msgstr "Restriciones de producto"
