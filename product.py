@@ -4,8 +4,7 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta, Pool
 
 __all__ = ['Restriction', 'RestrictionTemplate', 'Template', 'Sale',
-    'Purchase', 'ShipmentIn', 'ShipmentInReturn', 'ShipmentOut',
-    'ShipmentOutReturn']
+    'Purchase', 'ShipmentIn', 'ShipmentOut', 'ShipmentOutReturn']
 __metaclass__ = PoolMeta
 
 
@@ -97,22 +96,6 @@ class ShipmentIn:
             Template.check_product_restrictions(products, shipment.supplier,
                 type='supplier')
         super(ShipmentIn, cls).receive(shipments)
-
-
-class ShipmentInReturn:
-    __name__ = 'stock.shipment.in.return'
-
-    # TODO: Shipment in return has not party field :(
-    # See: https://bugs.tryton.org/issue4035
-    #@classmethod
-    #def assign(cls, shipments):
-    #    pool = Pool()
-    #    Template = pool.get('product.template')
-    #    for shipment in shipments:
-    #        products = list(set(l.product.template for l in shipment.moves))
-    #        Template.check_product_restrictions(products, shipment.supplier,
-    #            type='supplier')
-    #    super(ShipmentInReturn, cls).assign(shipments)
 
 
 class ShipmentOut:

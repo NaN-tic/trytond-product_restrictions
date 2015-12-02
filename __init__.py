@@ -16,7 +16,6 @@ def register():
         Sale,
         Purchase,
         ShipmentIn,
-        ShipmentInReturn,
         ShipmentOut,
         ShipmentOutReturn,
         module='product_restrictions', type_='model')
