@@ -81,7 +81,7 @@
         <!-- Menus -->
 
         <menuitem action="act_product_restriction" id="menu_product_restriction"
-            parent="product_configuration.menu_configuration" sequence="20" />
+            parent="product.menu_configuration" sequence="20" />
         <record model="ir.ui.menu-res.group"
             id="menu_product_restrictions_group_product_restriction">
             <field name="menu" ref="menu_product_restriction"/>
