@@ -5,18 +5,19 @@ from trytond.pool import PoolMeta, Pool
 
 __all__ = ['Restriction', 'RestrictionTemplate', 'Template', 'Sale',
     'Purchase', 'ShipmentIn', 'ShipmentOut', 'ShipmentOutReturn']
-__metaclass__ = PoolMeta
 
 
 class Restriction(ModelSQL, ModelView):
     'Product Restriction'
     __name__ = 'product.restriction'
+    __metaclass__ = PoolMeta
     name = fields.Char('Name', required=True)
 
 
 class RestrictionTemplate(ModelSQL):
     'Product Restriction - Product Template'
     __name__ = 'product.restriction-product.template'
+    __metaclass__ = PoolMeta
     restriction = fields.Many2One('product.restriction', 'Restriction',
         select=True, required=True, ondelete='CASCADE')
     template = fields.Many2One('product.template', 'Template',
@@ -25,6 +26,7 @@ class RestrictionTemplate(ModelSQL):
 
 class Template:
     __name__ = 'product.template'
+    __metaclass__ = PoolMeta
     restrictions = fields.Many2Many('product.restriction-product.template',
         'template', 'restriction', 'Restrictions')
 
@@ -56,6 +58,7 @@ class Template:
 
 class Sale:
     __name__ = 'sale.sale'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def quote(cls, sales):
@@ -70,6 +73,7 @@ class Sale:
 
 class Purchase:
     __name__ = 'purchase.purchase'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def quote(cls, purchases):
@@ -85,6 +89,7 @@ class Purchase:
 
 class ShipmentIn:
     __name__ = 'stock.shipment.in'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def receive(cls, shipments):
@@ -100,6 +105,7 @@ class ShipmentIn:
 
 class ShipmentOut:
     __name__ = 'stock.shipment.out'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def pack(cls, shipments):
@@ -124,6 +130,7 @@ class ShipmentOut:
 
 class ShipmentOutReturn:
     __name__ = 'stock.shipment.out.return'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def receive(cls, shipments):

@@ -8,9 +8,15 @@ from trytond.pool import Pool
 from trytond.tests.test_tryton import ModuleTestCase, with_transaction
 
 
-class TestCase(ModuleTestCase):
-    'Test module'
+class ProductRestrictionsTestCase(ModuleTestCase):
+    'Test Product Restrictions module'
     module = 'product_restrictions'
+
+    def setUp(self):
+        super(ProductRestrictionsTestCase, self).setUp()
+        trytond.tests.test_tryton.activate_module('sale')
+        trytond.tests.test_tryton.activate_module('purchase')
+
 
     @with_transaction()
     def test_restrictions(self):
@@ -77,5 +83,6 @@ class TestCase(ModuleTestCase):
 
 def suite():
     suite = trytond.tests.test_tryton.suite()
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestCase))
+    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(
+            ProductRestrictionsTestCase))
     return suite
