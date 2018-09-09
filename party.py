@@ -4,7 +4,6 @@ from trytond.model import ModelSQL, fields
 from trytond.pool import PoolMeta
 
 __all__ = ['RestrictionCustomer', 'RestrictionSupplier', 'Party']
-__metaclass__ = PoolMeta
 
 
 class RestrictionCustomer(ModelSQL):
@@ -25,7 +24,7 @@ class RestrictionSupplier(ModelSQL):
         ondelete='CASCADE')
 
 
-class Party:
+class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
     customer_restrictions = fields.Many2Many(
         'product.restriction-party.party.customer', 'party', 'restriction',

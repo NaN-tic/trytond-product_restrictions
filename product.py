@@ -7,26 +7,23 @@ __all__ = ['Restriction', 'RestrictionTemplate', 'Template', 'Sale',
     'Purchase', 'ShipmentIn', 'ShipmentOut', 'ShipmentOutReturn']
 
 
-class Restriction(ModelSQL, ModelView):
+class Restriction(ModelSQL, ModelView, metaclass=PoolMeta):
     'Product Restriction'
     __name__ = 'product.restriction'
-    __metaclass__ = PoolMeta
     name = fields.Char('Name', required=True)
 
 
-class RestrictionTemplate(ModelSQL):
+class RestrictionTemplate(ModelSQL, metaclass=PoolMeta):
     'Product Restriction - Product Template'
     __name__ = 'product.restriction-product.template'
-    __metaclass__ = PoolMeta
     restriction = fields.Many2One('product.restriction', 'Restriction',
         select=True, required=True, ondelete='CASCADE')
     template = fields.Many2One('product.template', 'Template',
         select=True, required=True, ondelete='CASCADE')
 
 
-class Template:
+class Template(metaclass=PoolMeta):
     __name__ = 'product.template'
-    __metaclass__ = PoolMeta
     restrictions = fields.Many2Many('product.restriction-product.template',
         'template', 'restriction', 'Restrictions')
 
@@ -56,9 +53,8 @@ class Template:
                         })
 
 
-class Sale:
+class Sale(metaclass=PoolMeta):
     __name__ = 'sale.sale'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def quote(cls, sales):
@@ -71,9 +67,8 @@ class Sale:
         super(Sale, cls).quote(sales)
 
 
-class Purchase:
+class Purchase(metaclass=PoolMeta):
     __name__ = 'purchase.purchase'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def quote(cls, purchases):
@@ -87,9 +82,8 @@ class Purchase:
         super(Purchase, cls).quote(purchases)
 
 
-class ShipmentIn:
+class ShipmentIn(metaclass=PoolMeta):
     __name__ = 'stock.shipment.in'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def receive(cls, shipments):
@@ -103,9 +97,8 @@ class ShipmentIn:
         super(ShipmentIn, cls).receive(shipments)
 
 
-class ShipmentOut:
+class ShipmentOut(metaclass=PoolMeta):
     __name__ = 'stock.shipment.out'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def pack(cls, shipments):
@@ -128,9 +121,8 @@ class ShipmentOut:
         super(ShipmentOut, cls).do(shipments)
 
 
-class ShipmentOutReturn:
+class ShipmentOutReturn(metaclass=PoolMeta):
     __name__ = 'stock.shipment.out.return'
-    __metaclass__ = PoolMeta
 
     @classmethod
     def receive(cls, shipments):
