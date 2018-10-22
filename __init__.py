@@ -10,10 +10,10 @@ def register():
         product.Restriction,
         product.RestrictionTemplate,
         product.Template,
-        party.Party,
         module='product_restrictions', type_='model')
     Pool.register(
         party.RestrictionCustomer,
+        party.PartyCustomer,
         product.Sale,
         product.ShipmentOut,
         product.ShipmentOutReturn,
@@ -21,6 +21,7 @@ def register():
         module='product_restrictions', type_='model')
     Pool.register(
         party.RestrictionSupplier,
+        party.PartySupplier,
         product.Purchase,
         product.ShipmentIn,
         depends=['purchase'],
