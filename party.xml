@@ -9,6 +9,14 @@
             <field name="inherit" ref="party.party_view_form"/>
             <field name="name">party_form</field>
         </record>
+    </data>
+    <data depends="sale">
+        <record model="ir.ui.view" id="party_customer_view_form">
+            <field name="model">party.party</field>
+            <field name="type" eval="None"/>
+            <field name="inherit" ref="party_view_form"/>
+            <field name="name">party_form_customer</field>
+        </record>
         <record model="ir.model.field.access"
             id="model_field_access_party_customer_restrictions">
             <field name="field"
@@ -23,6 +31,14 @@
             <field name="group" ref="group_product_restrictions_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
+        </record>
+    </data>
+    <data depends="purchase">
+        <record model="ir.ui.view" id="party_supplier_view_form">
+            <field name="model">party.party</field>
+            <field name="type" eval="None"/>
+            <field name="inherit" ref="party_view_form"/>
+            <field name="name">party_form_supplier</field>
         </record>
         <record model="ir.model.field.access"
             id="model_field_access_party_supplier_restrictions">
