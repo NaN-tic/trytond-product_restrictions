@@ -3,9 +3,7 @@
      copyright notices and license terms. -->
 <data>
     <xpath expr="/form/notebook" position="inside">
-        <page id="rescritions" col="2" string="Restrictions">
-            <field name="customer_restrictions" yexpand="1"/>
-            <field name="supplier_restrictions" yexpand="1"/>
+        <page id="restrictions" col="2" string="Restrictions">
         </page>
     </xpath>
 </data>
