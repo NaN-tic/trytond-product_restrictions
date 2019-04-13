@@ -11,11 +11,6 @@
             <field name="user" ref="res.user_admin"/>
             <field name="group" ref="group_product_restrictions_admin"/>
         </record>
-        <record model="res.user-res.group"
-                id="user_trigger_group_product_restrictions_admin">
-            <field name="user" ref="res.user_trigger"/>
-            <field name="group" ref="group_product_restrictions_admin"/>
-        </record>
         <record model="ir.ui.view" id="product_restriction_view_form">
             <field name="model">product.restriction</field>
             <field name="type">form</field>
