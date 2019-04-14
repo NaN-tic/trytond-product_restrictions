@@ -2,6 +2,8 @@
 # copyright notices and license terms.
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta, Pool
+from trytond.i18n import gettext
+from trytond.exceptions import UserError
 
 __all__ = ['Restriction', 'RestrictionTemplate', 'Template', 'Sale',
     'Purchase', 'ShipmentIn', 'ShipmentOut', 'ShipmentOutReturn']
@@ -28,15 +30,6 @@ class Template(metaclass=PoolMeta):
         'template', 'restriction', 'Restrictions')
 
     @classmethod
-    def __setup__(cls):
-        super(Template, cls).__setup__()
-        cls._error_messages.update({
-                'restricted_product': ('Product "%(product)s" can not be '
-                    'moved from/to party "%(party)s" because it misses '
-                    'restriction "%(restriction)s".'),
-                })
-
-    @classmethod
     def check_product_restrictions(cls, products, party, type='customer'):
         party_restrictions = set(getattr(party, '%s_restrictions' % type))
         for product in products:
@@ -46,11 +39,11 @@ class Template(metaclass=PoolMeta):
             missing = product_restrictions - party_restrictions
             if missing:
                 restriction = missing.pop()
-                cls.raise_user_error('restricted_product', {
-                        'product': product.rec_name,
-                        'party': party.rec_name,
-                        'restriction': restriction.rec_name,
-                        })
+                raise UserError(gettext(
+                    'product_restrictions.restricted_product',
+                        product=product.rec_name,
+                        party=party.rec_name,
+                        restriction=restriction.rec_name))
 
 
 class Sale(metaclass=PoolMeta):
