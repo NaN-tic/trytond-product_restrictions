@@ -14,7 +14,7 @@
         <record model="ir.ui.view" id="party_customer_view_form">
             <field name="model">party.party</field>
             <field name="type" eval="None"/>
-            <field name="inherit" ref="party_view_form"/>
+            <field name="inherit" ref="party.party_view_form"/>
             <field name="name">party_form_customer</field>
         </record>
         <record model="ir.model.field.access"
@@ -37,7 +37,7 @@
         <record model="ir.ui.view" id="party_supplier_view_form">
             <field name="model">party.party</field>
             <field name="type" eval="None"/>
-            <field name="inherit" ref="party_view_form"/>
+            <field name="inherit" ref="party.party_view_form"/>
             <field name="name">party_form_supplier</field>
         </record>
         <record model="ir.model.field.access"
