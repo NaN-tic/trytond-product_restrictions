@@ -168,7 +168,7 @@ msgstr "Restricció producte - Client"
 
 msgctxt "model:product.restriction-party.party.supplier,name:"
 msgid "Product Restriction - Supplier"
-msgstr "Restricció producte - Proveedor"
+msgstr "Restricció producte - Proveïdor"
 
 msgctxt "model:product.restriction-product.template,name:"
 msgid "Product Restriction - Product Template"
