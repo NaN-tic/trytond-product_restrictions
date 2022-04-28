@@ -1,22 +1,22 @@
-# The COPYRIGHT file at the top level of this repository contains the full
-# copyright notices and license terms.
+
+# This file is part of Tryton.  The COPYRIGHT file at the top level of
+# this repository contains the full copyright notices and license terms.
+
 from decimal import Decimal
-import unittest
 import trytond.tests.test_tryton
-from trytond.error import UserError
+from trytond.exceptions import UserError
 from trytond.pool import Pool
 from trytond.tests.test_tryton import ModuleTestCase, with_transaction
 
 
 class ProductRestrictionsTestCase(ModuleTestCase):
-    'Test Product Restrictions module'
+    'Test ProductRestrictions module'
     module = 'product_restrictions'
 
     def setUp(self):
         super(ProductRestrictionsTestCase, self).setUp()
         trytond.tests.test_tryton.activate_module('sale')
         trytond.tests.test_tryton.activate_module('purchase')
-
 
     @with_transaction()
     def test_restrictions(self):
@@ -81,8 +81,4 @@ class ProductRestrictionsTestCase(ModuleTestCase):
             supplier, type='supplier')
 
 
-def suite():
-    suite = trytond.tests.test_tryton.suite()
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(
-            ProductRestrictionsTestCase))
-    return suite
+del ModuleTestCase
