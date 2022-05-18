@@ -7,6 +7,7 @@ import trytond.tests.test_tryton
 from trytond.exceptions import UserError
 from trytond.pool import Pool
 from trytond.tests.test_tryton import ModuleTestCase, with_transaction
+from trytond.transaction import Transaction
 
 
 class ProductRestrictionsTestCase(ModuleTestCase):
@@ -43,13 +44,9 @@ class ProductRestrictionsTestCase(ModuleTestCase):
         free_template, restricted_template = Template.create([{
                     'name': 'Free Template',
                     'default_uom': unit,
-                    'list_price': Decimal(0),
-                    'cost_price': Decimal(0),
                     }, {
                     'name': 'Restricted Template',
                     'default_uom': unit,
-                    'list_price': Decimal(0),
-                    'cost_price': Decimal(0),
                     'restrictions': [('add', [restriction.id])],
                     }])
 
