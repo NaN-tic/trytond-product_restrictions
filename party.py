@@ -11,8 +11,8 @@ class RestrictionCustomer(ModelSQL):
     'Product Restriction - Customer'
     __name__ = 'product.restriction-party.party.customer'
     restriction = fields.Many2One('product.restriction', 'Restriction',
-        select=True, required=True, ondelete='CASCADE')
-    party = fields.Many2One('party.party', 'Party', select=True, required=True,
+        required=True, ondelete='CASCADE')
+    party = fields.Many2One('party.party', 'Party', required=True,
         ondelete='CASCADE')
 
 
@@ -21,8 +21,8 @@ class RestrictionSupplier(ModelSQL):
     __name__ = 'product.restriction-party.party.supplier'
     __metaclass__ = PoolMeta
     restriction = fields.Many2One('product.restriction', 'Restriction',
-        select=True, required=True, ondelete='CASCADE')
-    party = fields.Many2One('party.party', 'Party', select=True, required=True,
+        required=True, ondelete='CASCADE')
+    party = fields.Many2One('party.party', 'Party', required=True,
         ondelete='CASCADE')
 
 

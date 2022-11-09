@@ -19,9 +19,9 @@ class RestrictionTemplate(ModelSQL, metaclass=PoolMeta):
     'Product Restriction - Product Template'
     __name__ = 'product.restriction-product.template'
     restriction = fields.Many2One('product.restriction', 'Restriction',
-        select=True, required=True, ondelete='CASCADE')
+        required=True, ondelete='CASCADE')
     template = fields.Many2One('product.template', 'Template',
-        select=True, required=True, ondelete='CASCADE')
+        required=True, ondelete='CASCADE')
 
 
 class Template(metaclass=PoolMeta):
