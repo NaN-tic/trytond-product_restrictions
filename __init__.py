@@ -10,6 +10,7 @@ def register():
         product.Restriction,
         product.RestrictionTemplate,
         product.Template,
+        product.Product,
         module='product_restrictions', type_='model')
     Pool.register(
         party.RestrictionCustomer,
