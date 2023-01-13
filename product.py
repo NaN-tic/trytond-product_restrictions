@@ -46,6 +46,10 @@ class Template(metaclass=PoolMeta):
                         restriction=restriction.rec_name))
 
 
+class Product(metaclass=PoolMeta):
+    __name__ = 'product.product'
+
+
 class Sale(metaclass=PoolMeta):
     __name__ = 'sale.sale'
 
